@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "semantic-chunker"
+version = "0.1.0"
+description = "Semantic Chunker"
+authors = ["upjabir <upjabir@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+adopts=[
+    "--strict-markers",
+    "--strict-config",
+    "-ra"]
+pythonpath = ["semantic-chunker"]
+testpaths = ["tests"]
